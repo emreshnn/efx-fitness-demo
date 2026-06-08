@@ -70,16 +70,12 @@
     backdrop-filter:blur(2px);
   }
   .logo{
-    font-family:'Anton', sans-serif;
-    font-size:28px;
-    letter-spacing:0.04em;
     display:flex; align-items:center; gap:10px;
   }
-  .logo span{
-    background:var(--lime); color:var(--bg);
-    padding:2px 8px;
-    transform:skew(-8deg);
-    display:inline-block;
+  .logo img{
+    height:54px;
+    width:auto;
+    display:block;
   }
   nav ul{
     display:flex; gap:34px; list-style:none;
@@ -507,7 +503,7 @@
 <body>
 
 <header>
-  <a href="#top" class="logo">EF<span>X</span> FITNESS</a>
+  <a href="#top" class="logo"><img src="logo.jpeg" alt="EFX Fitness logo"></a>
   <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat">
     <span></span><span></span><span></span>
   </button>
