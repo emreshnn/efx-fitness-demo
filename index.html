@@ -737,7 +737,7 @@
               </select>
             </div>
             <button type="submit" class="form-submit">Talebi Gönder</button>
-            <p class="form-note mono" id="formNote">Teşekkürler! Demo form gönderimi alındı — ekibimiz seninle iletişime geçecek.</p>
+            <p class="form-note mono" id="formNote">WhatsApp açıldı — mesajı göndermek için sadece "Gönder"e bas!</p>
           </form>
         </div>
       </div>
@@ -798,8 +798,13 @@
   const note = document.getElementById('formNote');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const name    = document.getElementById('name').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+    const program = document.getElementById('program').value;
+    const msg = `Merhaba! Ücretsiz deneme dersi almak istiyorum.\n\nAd Soyad: ${name}\nTelefon: ${phone}\nİlgilendiğim program: ${program}`;
+    window.open('https://wa.me/905436539603?text=' + encodeURIComponent(msg), '_blank');
     note.classList.add('show');
-    form.querySelector('.form-submit').textContent = 'Gönderildi ✓';
+    form.querySelector('.form-submit').textContent = 'WhatsApp Açıldı ✓';
   });
 </script>
 
